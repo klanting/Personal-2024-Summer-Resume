@@ -8,17 +8,27 @@ const StyledUl = styled.ul`
     
     width: 60%;
     margin: 0 auto;
+    list-style-type: none;
+    margin-bottom: 2vh;
 `;
 
 const StyledListItem = styled.li`
-    list-style: none;
-    border: 5px solid whitesmoke;
-    padding: 0.5vw;
-    border-radius: 0.7vw;
+    text-align: center;
+    
 `;
 
 const StyledNavLink = styled(NavLink)`
+    display: block;
     text-decoration: none;
+    width: 100%;
+
+    background-image: linear-gradient(to right, rgb(45, 78, 198), rgb(0, 57, 228));
+    border-radius: 2vw;
+    
+    padding: 1vw 3vw;
+    
+    
+    color: whitesmoke;
 `;
 
 export default function Nav(){

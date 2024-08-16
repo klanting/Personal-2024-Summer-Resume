@@ -4,6 +4,7 @@ import Projects from "./mains/Projects.jsx";
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from "./components/Header.jsx";
 import Nav from "./components/Nav.jsx";
+import {useState} from "react";
 
 const GeneralStyling = createGlobalStyle`
 
@@ -28,14 +29,16 @@ const WrappedDiv = styled.div`
 `;
 
 function Root(){
+
+    const [title, setTitle] = useState("Home");
+
     return (
         <WrappedDiv>
-            <Header title={"project home"}/>
-            <Nav/>
             <Routes>
                 <Route path="/*" element={<Home/>}/>
                 <Route path="/projects/*" element={<Projects/>}/>
             </Routes>
+            <br/>
         </WrappedDiv>
     );
 }
