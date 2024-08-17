@@ -11,10 +11,13 @@ export default function LanguageGraph(props){
     if (isLoading || error){return <p>Loading</p>}
     console.log(data)
 
-    const transformed = Object.keys(data).map((key) => {return {language: key, value: data[key], color: colors[key].color} })
+    const transformedData = Object.keys(data).map((key) => {return {language: key, value: data[key], color: colors[key].color} })
+
+    let total = 0;
+    Object.values(data).forEach(val => {total += val;})
 
     const options = {
-        data: transformed,
+        data: transformedData,
         series: [
             {
                 type: "donut",
@@ -28,7 +31,15 @@ export default function LanguageGraph(props){
                     enabled: false,
                 },
                 innerRadiusRatio: 0.7,
-                fills: Object.keys(transformed).map((key) => transformed[key].color)
+                fills: Object.keys(transformedData).map((key) => transformedData[key].color),
+                tooltip: {
+                    renderer: ({ datum, calloutLabelKey, title, sectorLabelKey }) => {
+                        return {
+                            title,
+                            content: `${datum[calloutLabelKey]}: ${(datum[sectorLabelKey]/total*100).toFixed(2)}% (${datum[sectorLabelKey]} LOC)`,
+                        };
+                    },
+                }
             }
         ],
         legend: {
