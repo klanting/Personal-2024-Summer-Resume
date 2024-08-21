@@ -31,12 +31,11 @@ export default function ReadMeViewer(props){
 
     const fetcher = url => fetch(url).then(r => r.text());
 
-
     const readme = useSWR(`https://raw.githubusercontent.com/${props.name}/${props.branch}/README.md`, fetcher);
 
     let data = readme.data;
 
-    const imageRegex = RegExp(`!\\[.*\\]\\(.*\\)`, 'g');
+    const imageRegex = RegExp(`\\[.*\\]\\(.*\\)`, 'g');
 
     if (data === undefined){
         return (<p>w</p>);
@@ -77,7 +76,7 @@ export default function ReadMeViewer(props){
         <>
             <h6>ReadMe:</h6>
             <StyledP>
-                <Markdown remarkPlugins={[remarkGfm, remarkMath, rehypeRaw]} rehypePlugins={[rehypeKatex]}>{data}</Markdown>
+                <Markdown skipHtml={true} remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{data}</Markdown>
             </StyledP>
         </>
     );

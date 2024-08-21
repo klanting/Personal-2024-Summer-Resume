@@ -2,6 +2,7 @@ import {AgCharts} from "ag-charts-react";
 import useSWR from "swr";
 import colors from "../../assets/colors.json"
 import styled from "styled-components";
+import {useMemo} from "react";
 
 
 const StyledDiv = styled.div`
@@ -39,6 +40,7 @@ export default function LanguageGraph(props){
                 innerRadiusRatio: 0.7,
                 fills: Object.keys(transformedData).map((key) => transformedData[key].color),
                 tooltip: {
+                    enabled: false,
                     renderer: ({ datum, calloutLabelKey, title, sectorLabelKey }) => {
                         return {
                             title,
