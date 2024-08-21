@@ -13,8 +13,10 @@ const StyledLink = styled(NavLink)`
 const StyledDiv = styled.div`
     width: 70vw;
 
-    border: 2px solid rgb(100, 100, 100);
+    
     background-image: linear-gradient(10deg, rgb(20, 20, 20), rgb(30,30,30));
+
+    border: 2px solid rgb(100, 100, 100);
     border-radius: 10px;
 
     display: flex;
@@ -26,8 +28,9 @@ const StyledDiv = styled.div`
 
     cursor: pointer;
 
+    
     &:hover {
-        transform: scale(105%);
+        box-shadow:0 0 20px orange;
     }
 `;
 
