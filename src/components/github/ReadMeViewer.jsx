@@ -25,6 +25,7 @@ const StyledP = styled.p`
     box-shadow: 0 0 3vmin inset rgb(100, 100, 100);
 
     max-height: 18vw;
+    width: 45vw;
 `;
 
 export default function ReadMeViewer(props){
@@ -73,11 +74,11 @@ export default function ReadMeViewer(props){
     console.log("d", data)
 
     return(
-        <>
+        <div>
             <h6>ReadMe:</h6>
             <StyledP>
                 <Markdown skipHtml={true} remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{data}</Markdown>
             </StyledP>
-        </>
+        </div>
     );
 }

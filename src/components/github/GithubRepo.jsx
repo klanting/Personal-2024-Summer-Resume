@@ -13,25 +13,18 @@ const StyledLink = styled(NavLink)`
 
 const StyledDiv = styled.div`
     width: 70vw;
-
     
-    background-image: linear-gradient(10deg, rgb(20, 20, 20), rgb(30,30,30));
+    background-image: linear-gradient(10deg, rgb(20, 20, 20), rgb(30, 30, 30));
 
     border: 2px solid rgb(100, 100, 100);
     border-radius: 10px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 2vw;
-
     margin: 5% auto;
-
     cursor: pointer;
 
-    
+
     &:hover {
-        box-shadow:0 0 20px orange;
+        box-shadow: 0 0 40px rgba(0, 57, 228, 1);
     }
 `;
 
@@ -67,6 +60,7 @@ const StyledTopic = styled.p`
 
 const StyledImage = styled.img`
     max-height: 2vw;
+    border-radius: 5px;
 `;
 
 
@@ -124,28 +118,28 @@ export default function GithubRepo(props){
     return(
         <StyledLink to={props.data.html_url} target="_blank">
             <StyledDiv>
-                <div>
-                    <StyledTitle>{title}</StyledTitle>
-                    <StyledDescription>{props.data.description}</StyledDescription>
+                <StyledTitle>{title}</StyledTitle>
+                <StyledDescription>{props.data.description}</StyledDescription>
 
-                    <p>Institute: <StyledImage data-tooltip-id="institute" data-tooltip-content={institutes[institute]["name"]}
-                                               src={institutes[institute]["image"]}
-                                               alt={institutes[institute]["name"]}/></p>
-                    <Tooltip id="institute" />
-                    <p>Year: {year}</p>
-                    <p>Term: {term}</p>
-                    <br/>
+                <p>Institute: <StyledImage data-tooltip-id="institute" data-tooltip-content={institutes[institute]["name"]}
+                                           src={institutes[institute]["image"]}
+                                           alt={institutes[institute]["name"]}/></p>
+                <Tooltip id="institute" />
+                <p>Year: {year}</p>
+                <p>Term: {term}</p>
+                <br/>
 
+                <div style={{display: "flex",flexDirection: "row"}}>
                     <ReadMeViewer name={props.data.full_name} branch={props.data.default_branch}/>
-
-                    <h6>Project Tags</h6>
-                    <StyledTopicBox>
-                        {props.data.topics.map((topic) => <StyledTopic key={topic}>{topic}</StyledTopic>)}
-                    </StyledTopicBox>
-
-
+                    <LanguageGraph name={props.data.full_name}/>
                 </div>
-                <LanguageGraph name={props.data.full_name}/>
+
+
+                <h6>Project Tags</h6>
+                <StyledTopicBox>
+                    {props.data.topics.map((topic) => <StyledTopic key={topic}>{topic}</StyledTopic>)}
+                </StyledTopicBox>
+
             </StyledDiv>
         </StyledLink>
 

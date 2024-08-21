@@ -5,6 +5,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from "./components/Header.jsx";
 import Nav from "./components/Nav.jsx";
 import {useState} from "react";
+import Education from "./mains/Education.jsx";
+import Achievements from "./mains/Achievements.jsx";
 
 const GeneralStyling = createGlobalStyle`
 
@@ -37,6 +39,8 @@ function Root(){
             <Routes>
                 <Route path="/*" element={<Home/>}/>
                 <Route path="/projects/*" element={<Projects/>}/>
+                <Route path="/education/*" element={<Education/>}/>
+                <Route path="/achievements/*" element={<Achievements/>}/>
             </Routes>
             <br/>
         </WrappedDiv>

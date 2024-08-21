@@ -6,9 +6,12 @@ const StyledUl = styled.ul`
     flex-direction: row;
     justify-content: space-evenly;
     
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
     list-style-type: none;
+    
+    padding: 0;
+    
     margin-bottom: 2vh;
 `;
 
@@ -41,6 +44,12 @@ export default function Nav(){
                 </StyledListItem>
                 <StyledListItem>
                     <StyledNavLink to="/projects/">Projects</StyledNavLink>
+                </StyledListItem>
+                <StyledListItem>
+                    <StyledNavLink to="/education/">Education</StyledNavLink>
+                </StyledListItem>
+                <StyledListItem>
+                    <StyledNavLink to="/achievements/">Achievements</StyledNavLink>
                 </StyledListItem>
             </StyledUl>
         </nav>

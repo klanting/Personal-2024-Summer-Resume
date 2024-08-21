@@ -6,7 +6,8 @@ import {useMemo} from "react";
 
 
 const StyledDiv = styled.div`
-    width: 30%;
+    width: 25%;
+    margin: auto;
     aspect-ratio: 1;
 `;
 
@@ -40,11 +41,10 @@ export default function LanguageGraph(props){
                 innerRadiusRatio: 0.7,
                 fills: Object.keys(transformedData).map((key) => transformedData[key].color),
                 tooltip: {
-                    enabled: false,
                     renderer: ({ datum, calloutLabelKey, title, sectorLabelKey }) => {
                         return {
                             title,
-                            content: `${datum[calloutLabelKey]}: ${(datum[sectorLabelKey]/total*100).toFixed(2)}% (${datum[sectorLabelKey]} LOC)`,
+                            content: `${datum[calloutLabelKey]}: ${(datum[sectorLabelKey]/total*100).toFixed(2)}%`,
                         };
                     },
                 }
