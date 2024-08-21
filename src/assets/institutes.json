@@ -1,11 +1,14 @@
 {
   "UA": {
-    "image": "UA-logo.png"
+    "image": "/icons/UA-logo.png",
+    "name": "UAntwerpen"
   },
   "BU": {
-    "image": "BU-logo.png"
+    "image": "/icons/BU-logo.png",
+    "name": "Boston University"
   },
   "Personal": {
-    "image": "personal.png"
+    "image": "/icons/Personal.png",
+    "name": "Personal"
   }
 }

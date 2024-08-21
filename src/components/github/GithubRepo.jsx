@@ -3,7 +3,8 @@ import styled from "styled-components";
 import LanguageGraph from "./LanguageGraph.jsx";
 import {NavLink} from "react-router-dom";
 import ReadMeViewer from "./ReadMeViewer.jsx";
-
+import institutes from "../../assets/institutes.json"
+import { Tooltip } from 'react-tooltip'
 
 const StyledLink = styled(NavLink)`
     text-decoration: none;
@@ -64,6 +65,10 @@ const StyledTopic = styled.p`
     background-image: linear-gradient(to right, rgba(45, 78, 198, 0.7), rgba(0, 57, 228, 0.7));
 `;
 
+const StyledImage = styled.img`
+    max-height: 2vw;
+`;
+
 
 function stripTitle(githubTitle){
     /*
@@ -76,7 +81,7 @@ function stripTitle(githubTitle){
     /*
     * Use of regex to verify whether the format matches
     * */
-    const regex = RegExp(`^(${institutes.join("|")})-[0-9]+-(${terms.join("|")})-[a-zA-Z\\-]+$`, 'g');
+    const regex = RegExp(`^(${institutes.join("|")})-[0-9]+-(${terms.join("|")})-.+$`, 'g');
 
     const hasMatch = regex.test(githubTitle);
 
@@ -106,13 +111,30 @@ export default function GithubRepo(props){
     * This component represents 1 Github repository whose information is being displayed
     * */
 
-    stripTitle(props.data.name);
+    const stripped = stripTitle(props.data.name);
+    console.log("valid", stripped.valid)
+    if (!stripped.valid){
+        return (<></>);
+    }
+
+    const {institute, year, term, title} = stripped;
+
+    console.log("vkk", institutes[institute]["image"])
+
     return(
         <StyledLink to={props.data.html_url} target="_blank">
             <StyledDiv>
                 <div>
-                    <StyledTitle>{props.data.name}</StyledTitle>
+                    <StyledTitle>{title}</StyledTitle>
                     <StyledDescription>{props.data.description}</StyledDescription>
+
+                    <p>Institute: <StyledImage data-tooltip-id="institute" data-tooltip-content={institutes[institute]["name"]}
+                                               src={institutes[institute]["image"]}
+                                               alt={institutes[institute]["name"]}/></p>
+                    <Tooltip id="institute" />
+                    <p>Year: {year}</p>
+                    <p>Term: {term}</p>
+                    <br/>
 
                     <ReadMeViewer name={props.data.full_name} branch={props.data.default_branch}/>
 
@@ -120,6 +142,7 @@ export default function GithubRepo(props){
                     <StyledTopicBox>
                         {props.data.topics.map((topic) => <StyledTopic key={topic}>{topic}</StyledTopic>)}
                     </StyledTopicBox>
+
 
                 </div>
                 <LanguageGraph name={props.data.full_name}/>
