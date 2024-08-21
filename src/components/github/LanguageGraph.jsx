@@ -1,6 +1,13 @@
 import {AgCharts} from "ag-charts-react";
 import useSWR from "swr";
 import colors from "../../assets/colors.json"
+import styled from "styled-components";
+
+
+const StyledDiv = styled.div`
+    width: 30%;
+    aspect-ratio: 1;
+`;
 
 export default function LanguageGraph(props){
 
@@ -10,7 +17,6 @@ export default function LanguageGraph(props){
 
     if (isLoading || error){return <p>Loading</p>}
     console.log(data)
-
     const transformedData = Object.keys(data).map((key) => {return {language: key, value: data[key], color: colors[key].color} })
 
     let total = 0;
@@ -54,9 +60,9 @@ export default function LanguageGraph(props){
         }
     }
     return(
-        <>
+        <StyledDiv>
             <AgCharts options={options}/>
-        </>
+        </StyledDiv>
 
     );
 }

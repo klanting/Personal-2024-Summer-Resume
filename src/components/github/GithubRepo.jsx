@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import LanguageGraph from "./LanguageGraph.jsx";
 import {NavLink} from "react-router-dom";
+import ReadMeViewer from "./ReadMeViewer.jsx";
 
 
 const StyledLink = styled(NavLink)`
@@ -11,8 +12,10 @@ const StyledLink = styled(NavLink)`
 
 const StyledDiv = styled.div`
     width: 70vw;
-    aspect-ratio: 3/1;
-    border-left: 2px solid rgb(0, 57, 228);
+
+    border: 2px solid rgb(100, 100, 100);
+    background-image: linear-gradient(10deg, rgb(20, 20, 20), rgb(30,30,30));
+    border-radius: 10px;
 
     display: flex;
     flex-direction: row;
@@ -107,6 +110,8 @@ export default function GithubRepo(props){
                 <div>
                     <StyledTitle>{props.data.name}</StyledTitle>
                     <StyledDescription>{props.data.description}</StyledDescription>
+
+                    <ReadMeViewer name={props.data.full_name} branch={props.data.default_branch}/>
 
                     <h6>Project Tags</h6>
                     <StyledTopicBox>
