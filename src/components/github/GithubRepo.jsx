@@ -23,7 +23,7 @@ const StyledDiv = styled.div`
     cursor: pointer;
 
 
-    &:hover {
+    &:hover, &:focus {
         box-shadow: 0 0 40px rgba(0, 57, 228, 1);
     }
 `;
@@ -59,7 +59,7 @@ const StyledTopic = styled.p`
 `;
 
 const StyledImage = styled.img`
-    max-height: 2vw;
+    max-width: 2vw;
     border-radius: 5px;
 `;
 
