@@ -5,6 +5,8 @@ import {NavLink} from "react-router-dom";
 import ReadMeViewer from "./ReadMeViewer.jsx";
 import institutes from "../../assets/institutes.json"
 import { Tooltip } from 'react-tooltip'
+import StyledTitle from "../../styled/StyledTitle.jsx";
+import Institute from "../Institute.jsx";
 
 const StyledLink = styled(NavLink)`
     text-decoration: none;
@@ -26,10 +28,6 @@ const StyledDiv = styled.div`
     &:hover, &:focus {
         box-shadow: 0 0 40px rgba(0, 57, 228, 1);
     }
-`;
-
-const StyledTitle = styled.h3`
-    text-align: center;
 `;
 
 const StyledDescription = styled.p`
@@ -58,10 +56,7 @@ const StyledTopic = styled.p`
     background-image: linear-gradient(to right, rgba(45, 78, 198, 0.7), rgba(0, 57, 228, 0.7));
 `;
 
-const StyledImage = styled.img`
-    max-width: 2vw;
-    border-radius: 5px;
-`;
+
 
 
 function stripTitle(githubTitle){
@@ -106,14 +101,11 @@ export default function GithubRepo(props){
     * */
 
     const stripped = stripTitle(props.data.name);
-    console.log("valid", stripped.valid)
     if (!stripped.valid){
         return (<></>);
     }
 
     const {institute, year, term, title} = stripped;
-
-    console.log("vkk", institutes[institute]["image"])
 
     return(
         <StyledLink to={props.data.html_url} target="_blank">
@@ -121,10 +113,8 @@ export default function GithubRepo(props){
                 <StyledTitle>{title}</StyledTitle>
                 <StyledDescription>{props.data.description}</StyledDescription>
 
-                <p>Institute: <StyledImage data-tooltip-id="institute" data-tooltip-content={institutes[institute]["name"]}
-                                           src={institutes[institute]["image"]}
-                                           alt={institutes[institute]["name"]}/></p>
-                <Tooltip id="institute" />
+                <Institute institute={institute}/>
+
                 <p>Year: {year}</p>
                 <p>Term: {term}</p>
                 <br/>

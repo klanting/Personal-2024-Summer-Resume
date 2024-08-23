@@ -2,7 +2,7 @@
   {
     "title": "HighSchool",
     "timespan": ["2016", "2022"],
-    "institute": "Gemeentelijk Instituut Brasschaat (GIB) (Belgium)",
+    "institute": "GIB",
     "status": {
       "tag":  "completed",
       "additional": ""
@@ -12,7 +12,7 @@
   {
     "title": "Bachelor degree Computer Science",
     "timespan": ["2022", "now"],
-    "institute": "University of Antwerp (Belgium)",
+    "institute": "UA",
     "status": {
       "tag":  "in progress",
       "additional": "2/3 years completed"
@@ -22,7 +22,7 @@
   {
     "title": "Honours Programme Science",
     "timespan": ["2023", "now"],
-    "institute": "University of Antwerp (Belgium)",
+    "institute": "UA",
     "status": {
       "tag":  "in progress",
       "additional": ""
@@ -33,7 +33,7 @@
   {
     "title": "Topics in Computer Science: Web Application Development (CS 391)",
     "timespan": ["2024 Summer", null],
-    "institute": "Boston University (USA)",
+    "institute": "BU",
     "status": {
       "tag":  "completed",
       "additional": ""
