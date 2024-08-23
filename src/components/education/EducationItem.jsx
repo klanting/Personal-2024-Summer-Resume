@@ -2,8 +2,8 @@
 import styled from "styled-components";
 import StyledTitle from "../../styled/StyledTitle.jsx";
 import Institute from "../Institute.jsx";
-import status from "../../assets/status.json"
 import Status from "../Status.jsx";
+import Timespan from "../Timespan.jsx";
 const StyledLi = styled.li`
     list-style-type: none;
     
@@ -13,19 +13,27 @@ const StyledLi = styled.li`
     padding: 2vw;
 `;
 
+const StyledLabels = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3% 0;
+`;
+
 
 export default function EducationItem(props){
 
     return (
         <StyledLi>
             <StyledTitle>{props.data.title}</StyledTitle>
-            <p>{props.data.timespan[0]}-{props.data.timespan[1]}</p>
 
-            <Institute institute={props.data.institute}/>
+            <StyledLabels>
+                <Timespan timespan={props.data.timespan}/>
 
-            <Status status={props.data.status}/>
+                <Institute institute={props.data.institute}/>
 
-            <br/>
+                <Status status={props.data.status}/>
+            </StyledLabels>
+
             <p dangerouslySetInnerHTML={{__html: props.data.additional}}></p>
         </StyledLi>
     );

@@ -1,6 +1,5 @@
 import status from "../assets/status.json";
 import styled from "styled-components";
-import institutes from "../assets/institutes.json";
 import {Tooltip} from "react-tooltip";
 
 const StyledImage = styled.img`
@@ -10,6 +9,9 @@ const StyledImage = styled.img`
 `;
 
 export default function Status(props){
+    /*
+    * Shows the status information
+    * */
     return(
         <>
             <p>
