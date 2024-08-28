@@ -7,6 +7,8 @@ import institutes from "../../assets/institutes.json"
 import { Tooltip } from 'react-tooltip'
 import StyledTitle from "../../styled/StyledTitle.jsx";
 import Institute from "../Institute.jsx";
+import {useContext} from "react";
+import {ThemeContext} from "../../context/ThemeContext.jsx";
 
 const StyledLink = styled(NavLink)`
     text-decoration: none;
@@ -16,9 +18,9 @@ const StyledLink = styled(NavLink)`
 const StyledDiv = styled.div`
     width: 70vw;
     
-    background-image: linear-gradient(10deg, rgb(20, 20, 20), rgb(30, 30, 30));
+    background-image: linear-gradient(10deg, ${(props) => props.theme.projectsBackgroundPrimary}, ${(props) => props.theme.projectsBackgroundSecondary});
 
-    border: 2px solid rgb(100, 100, 100);
+    border: 2px solid ${(props) => props.theme.projectsBorder};
     border-radius: 10px;
     padding: 2vw;
     margin: 5% auto;
@@ -26,7 +28,7 @@ const StyledDiv = styled.div`
 
 
     &:hover, &:focus {
-        box-shadow: 0 0 40px rgba(0, 57, 228, 1);
+        box-shadow: 0 0 40px ${(props) => props.theme.projectGlow};
     }
 `;
 
@@ -53,7 +55,7 @@ const StyledTopic = styled.p`
     text-align: center;
 
 
-    background-image: linear-gradient(to right, rgba(45, 78, 198, 0.7), rgba(0, 57, 228, 0.7));
+    background-image: linear-gradient(to right, ${(props) => props.theme.projectTopicPrimary}, ${(props) => props.theme.projectTopicSecondary});
 `;
 
 
@@ -107,9 +109,11 @@ export default function GithubRepo(props){
 
     const {institute, year, term, title} = stripped;
 
+    const theme = useContext(ThemeContext);
+
     return(
         <StyledLink to={props.data.html_url} target="_blank">
-            <StyledDiv>
+            <StyledDiv theme={theme}>
                 <StyledTitle>{title}</StyledTitle>
                 <StyledDescription>{props.data.description}</StyledDescription>
 
@@ -127,7 +131,7 @@ export default function GithubRepo(props){
 
                 <h6>Project Tags</h6>
                 <StyledTopicBox>
-                    {props.data.topics.map((topic) => <StyledTopic key={topic}>{topic}</StyledTopic>)}
+                    {props.data.topics.map((topic) => <StyledTopic theme={theme} key={topic}>{topic}</StyledTopic>)}
                 </StyledTopicBox>
 
             </StyledDiv>

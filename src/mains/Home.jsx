@@ -1,7 +1,6 @@
-import Header from "../components/Header.jsx";
-import Nav from "../components/Nav.jsx";
 import styled from "styled-components";
 import StyledText from "../styled/StyledText.jsx";
+import Page from "../components/Page.jsx";
 
 const StyledProfileImage = styled.img`
     max-width: 30%;
@@ -16,9 +15,7 @@ const StyledProfileImage = styled.img`
 export default function Home() {
 
     return (
-        <>
-            <Header title={"Homepage"}/>
-            <Nav/>
+        <Page title={"Homepage"}>
 
             <StyledProfileImage id="profile-picture" src="/pictures/resume-picture.jpg" alt="Tibo Verreycken"/>
 
@@ -28,6 +25,6 @@ export default function Home() {
                 At my university I also participate in the Honours Programme Science.
             </StyledText>
 
-        </>
+        </Page>
     );
 }

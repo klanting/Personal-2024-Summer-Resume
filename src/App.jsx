@@ -4,9 +4,10 @@ import Projects from "./mains/Projects.jsx";
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from "./components/Header.jsx";
 import Nav from "./components/Nav.jsx";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import Education from "./mains/Education.jsx";
 import Achievements from "./mains/Achievements.jsx";
+import ThemeContextProvider, {ThemeContext} from "./context/ThemeContext.jsx";
 
 const GeneralStyling = createGlobalStyle`
 
@@ -16,7 +17,7 @@ const GeneralStyling = createGlobalStyle`
     }
 
     body {
-        background-color: #050505;
+        background-color: ${(props) => props.theme.bodySides};
         color: whitesmoke;
         font-size: calc(2px + 2vw);
 
@@ -27,23 +28,29 @@ const WrappedDiv = styled.div`
     width: 80%;
     min-height: 100vh;
     margin: 0 auto;
-    background-color: #17172e;
+    background-color: ${(props) => props.theme.background};
 `;
 
 function Root(){
 
-    const [title, setTitle] = useState("Home");
+    const theme = useContext(ThemeContext);
 
     return (
-        <WrappedDiv>
-            <Routes>
-                <Route path="/*" element={<Home/>}/>
-                <Route path="/projects/*" element={<Projects/>}/>
-                <Route path="/education/*" element={<Education/>}/>
-                <Route path="/achievements/*" element={<Achievements/>}/>
-            </Routes>
-            <br/>
-        </WrappedDiv>
+        <>
+            <WrappedDiv theme={theme}>
+                <Routes>
+                    <Route path="/*" element={<Home/>}/>
+                    <Route path="/projects/*" element={<Projects/>}/>
+                    <Route path="/education/*" element={<Education/>}/>
+                    <Route path="/achievements/*" element={<Achievements/>}/>
+                </Routes>
+                <br/>
+
+            </WrappedDiv>
+            <GeneralStyling theme={theme}/>
+        </>
+
+
     );
 }
 
@@ -54,8 +61,10 @@ function App() {
 
     return (
     <>
-        <RouterProvider router={router}/>
-        <GeneralStyling/>
+        <ThemeContextProvider>
+            <RouterProvider router={router}/>
+        </ThemeContextProvider>
+
     </>
     )
 }

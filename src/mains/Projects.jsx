@@ -1,7 +1,6 @@
 import useSWR from "swr";
 import GithubRepo from "../components/github/GithubRepo.jsx";
-import Header from "../components/Header.jsx";
-import Nav from "../components/Nav.jsx";
+import Page from "../components/Page.jsx";
 
 export default function Projects() {
 
@@ -12,14 +11,12 @@ export default function Projects() {
     if (isLoading || error){return <p>Loading</p>}
 
     return (
-        <>
-            <Header title={"Projects"}/>
-            <Nav/>
+        <Page title={"Projects"}>
             {data.map((elem) =>
                 <GithubRepo key={elem.id} data={elem}/>
             )}
 
 
-        </>
+        </Page>
     );
 }

@@ -1,5 +1,7 @@
 import {NavLink} from "react-router-dom";
 import styled from "styled-components";
+import {useContext} from "react";
+import {ThemeContext} from "../context/ThemeContext.jsx";
 
 const StyledUl = styled.ul`
     display: flex;
@@ -7,12 +9,10 @@ const StyledUl = styled.ul`
     justify-content: space-evenly;
     
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 2vh auto;
     list-style-type: none;
     
     padding: 0;
-    
-    margin-bottom: 2vh;
 `;
 
 const StyledListItem = styled.li`
@@ -25,7 +25,7 @@ const StyledNavLink = styled(NavLink)`
     text-decoration: none;
     width: 100%;
 
-    background-image: linear-gradient(to right, rgb(45, 78, 198), rgb(0, 57, 228));
+    background-image: linear-gradient(to right, ${(props) => props.theme.headerPrimary}, ${(props) => props.theme.headerSecondary});
     border-radius: 2vw;
     
     padding: 1vw 3vw;
@@ -35,21 +35,24 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 export default function Nav(){
+
+    const theme = useContext(ThemeContext);
+
     return(
         <nav>
             <StyledUl>
                 <StyledListItem>
-                    <StyledNavLink to="/">Home</StyledNavLink>
+                    <StyledNavLink theme={theme} to="/">Home</StyledNavLink>
 
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledNavLink to="/projects/">Projects</StyledNavLink>
+                    <StyledNavLink theme={theme} to="/projects/">Projects</StyledNavLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledNavLink to="/education/">Education</StyledNavLink>
+                    <StyledNavLink theme={theme} to="/education/">Education</StyledNavLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledNavLink to="/achievements/">Achievements</StyledNavLink>
+                    <StyledNavLink theme={theme} to="/achievements/">Achievements</StyledNavLink>
                 </StyledListItem>
             </StyledUl>
         </nav>
