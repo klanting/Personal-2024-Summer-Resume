@@ -8,6 +8,7 @@ import {useContext, useState} from "react";
 import Education from "./mains/Education.jsx";
 import Achievements from "./mains/Achievements.jsx";
 import ThemeContextProvider, {ThemeContext} from "./context/ThemeContext.jsx";
+import Credits from "./mains/Credits.jsx";
 
 const GeneralStyling = createGlobalStyle`
 
@@ -26,7 +27,6 @@ const GeneralStyling = createGlobalStyle`
 
 const WrappedDiv = styled.div`
     width: 80%;
-    min-height: 100vh;
     margin: 0 auto;
     background-color: ${(props) => props.theme.background};
 `;
@@ -43,10 +43,11 @@ function Root(){
                     <Route path="/projects/*" element={<Projects/>}/>
                     <Route path="/education/*" element={<Education/>}/>
                     <Route path="/achievements/*" element={<Achievements/>}/>
+                    <Route path="/credits/*" element={<Credits/>}/>
                 </Routes>
-                <br/>
 
             </WrappedDiv>
+
             <GeneralStyling theme={theme}/>
         </>
 

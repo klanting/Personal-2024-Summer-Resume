@@ -15,6 +15,8 @@ const StyledProfileImage = styled.img`
 export default function Home() {
 
     return (
+        <>
+
         <Page title={"Homepage"}>
 
             <StyledProfileImage id="profile-picture" src="/pictures/resume-picture.jpg" alt="Tibo Verreycken"/>
@@ -26,5 +28,6 @@ export default function Home() {
             </StyledText>
 
         </Page>
+        </>
     );
 }

@@ -1,22 +1,26 @@
+import {NavLink} from "react-router-dom";
 import styled from "styled-components";
 import {useContext} from "react";
 import {ThemeContext} from "../context/ThemeContext.jsx";
 
-const StyledHeader = styled.header`
+const StyledFooter = styled.footer`
     background-image: linear-gradient(to right, ${(props) => props.theme.headerPrimary}, ${(props) => props.theme.headerSecondary});
     text-align: center;
     font-size: calc(2px + 2.5vw);
-    padding: 1vh 1vw;
-    margin-bottom: 2vh;
+    
+    width: 100%;
+    
+    
 `;
 
-export default function Header(props){
+export default function Footer(){
 
     const theme = useContext(ThemeContext);
 
-    return(
-        <StyledHeader theme={theme}>
-            <h1>{props.title}</h1>
-        </StyledHeader>
+    return (
+        <StyledFooter theme={theme}>
+            <p>All Rights reserved by Tibo Verreycken <NavLink
+                to="/credits">Credits</NavLink> &copy;</p>
+        </StyledFooter>
     );
- }
+}
