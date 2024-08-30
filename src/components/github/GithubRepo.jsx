@@ -98,7 +98,7 @@ function stripTitle(githubTitle){
 
 export default function GithubRepo(props){
     /*
-    * This component represents 1 Github repository whose information is being displayed
+    * This component represents a GitHub repository whose information is being displayed
     * */
 
     const theme = useContext(ThemeContext);

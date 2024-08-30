@@ -26,20 +26,30 @@ const StyledLabels = styled.div`
 
 export default function EducationItem(props){
 
+    /*
+    * This component provides an entry of an education record.
+    * */
+
     const theme = useContext(ThemeContext);
 
     return (
         <StyledLi theme={theme}>
+            {/*Provide the title*/}
             <StyledTitle>{props.data.title}</StyledTitle>
 
             <StyledLabels>
+
+                {/*Provide the start and end year (if exists) of this course/academic accomplishment*/}
                 <Timespan timespan={props.data.timespan}/>
 
+                {/*Visualize the institute where this education is done*/}
                 <Institute institute={props.data.institute}/>
 
+                {/*Visualize the current status of the progress*/}
                 <Status status={props.data.status}/>
             </StyledLabels>
 
+            {/*Provide additional information*/}
             <p dangerouslySetInnerHTML={{__html: props.data.additional}}></p>
         </StyledLi>
     );

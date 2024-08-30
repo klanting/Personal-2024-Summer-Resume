@@ -29,19 +29,24 @@ const StyledP = styled.p`
 `;
 
 export default function ReadMeViewer(props){
+    /*
+    * This component uses a markdown renderer to render the ReadMe Page
+    * */
 
     const fetcher = url => fetch(url).then(r => r.text());
 
+    /*
+    * ReadMe Data
+    * */
     const readme = useSWR(`https://raw.githubusercontent.com/${props.name}/${props.branch}/README.md`, fetcher);
-
     let data = readme.data;
 
-    const imageRegex = RegExp(`\\[.*\\]\\(.*\\)`, 'g');
-
     if (data === undefined){
-        return (<p>w</p>);
+        return (<p></p>);
     }
 
+    /*Find all the images in the readme*/
+    const imageRegex = RegExp(`\\[.*\\]\\(.*\\)`, 'g');
     let requiredImages = data.match(imageRegex);
 
     if (requiredImages === null){
@@ -70,8 +75,6 @@ export default function ReadMeViewer(props){
         * */
         data = data.replaceAll(requiredPath, imageAccessPath)
     }
-
-    console.log("d", data)
 
     return(
         <div>

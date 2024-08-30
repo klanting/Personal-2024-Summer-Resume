@@ -14,6 +14,10 @@ const StyledDiv = styled.div`
 `;
 
 export default function LanguageGraph(props){
+    /*
+    * GitHub Projects have data about which programming languages are used, and their percentage.
+    * This component visualizes a donut graph to provide this information
+    * */
 
     const fetcher = url => fetch(url).then(r => r.json());
     const { data, error, isLoading } = useSWR(`https://api.github.com/repos/${props.name}/languages`, fetcher);
@@ -26,8 +30,9 @@ export default function LanguageGraph(props){
     let total = 0;
     Object.values(data).forEach(val => {total += val;})
 
-
-
+    /*
+    * Donut config
+    * */
     const options = {
         data: transformedData,
         series: [
@@ -65,8 +70,11 @@ export default function LanguageGraph(props){
             visible: false
         }
     }
+
+
     return(
         <StyledDiv>
+            {/*Visualize Graph*/}
             <AgCharts options={options}/>
         </StyledDiv>
 

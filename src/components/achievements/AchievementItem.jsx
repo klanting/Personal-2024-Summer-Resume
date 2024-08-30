@@ -22,6 +22,10 @@ const StyledImage = styled.img`
 
 export default function AchievementItem(props){
 
+    /*
+    * This component provides an entry of an achievement.
+    * */
+
     const theme = useContext(ThemeContext);
 
     return (
