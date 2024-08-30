@@ -4,6 +4,7 @@ import Markdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
+import PropTypes from "prop-types";
 
 const StyledP = styled.p`
     border: 2px solid rgb(100, 100, 100);
@@ -80,4 +81,9 @@ export default function ReadMeViewer(props){
             </StyledP>
         </div>
     );
+}
+
+ReadMeViewer.propTypes = {
+    name: PropTypes.string.isRequired,
+    branch: PropTypes.string.isRequired
 }

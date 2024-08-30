@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Timespan(props){
 
     let string = `${props.timespan[0]}-${props.timespan[1]}`
@@ -8,4 +10,8 @@ export default function Timespan(props){
     return (
         <p>{string}</p>
     );
+}
+
+Timespan.propTypes = {
+    timespan: PropTypes.array.isRequired
 }

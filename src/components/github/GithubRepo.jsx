@@ -3,16 +3,15 @@ import styled from "styled-components";
 import LanguageGraph from "./LanguageGraph.jsx";
 import {NavLink} from "react-router-dom";
 import ReadMeViewer from "./ReadMeViewer.jsx";
-import institutes from "../../assets/institutes.json"
-import { Tooltip } from 'react-tooltip'
 import StyledTitle from "../../styled/StyledTitle.jsx";
 import Institute from "../Institute.jsx";
 import {useContext} from "react";
 import {ThemeContext} from "../../context/ThemeContext.jsx";
+import PropTypes from "prop-types";
 
 const StyledLink = styled(NavLink)`
     text-decoration: none;
-    color: whitesmoke;
+    color: ${(props) => props.theme.textColor};
 `;
 
 const StyledDiv = styled.div`
@@ -102,6 +101,8 @@ export default function GithubRepo(props){
     * This component represents 1 Github repository whose information is being displayed
     * */
 
+    const theme = useContext(ThemeContext);
+
     const stripped = stripTitle(props.data.name);
     if (!stripped.valid){
         return (<></>);
@@ -109,10 +110,8 @@ export default function GithubRepo(props){
 
     const {institute, year, term, title} = stripped;
 
-    const theme = useContext(ThemeContext);
-
     return(
-        <StyledLink to={props.data.html_url} target="_blank">
+        <StyledLink theme={theme} to={props.data.html_url} target="_blank">
             <StyledDiv theme={theme}>
                 <StyledTitle>{title}</StyledTitle>
                 <StyledDescription>{props.data.description}</StyledDescription>
@@ -138,4 +137,8 @@ export default function GithubRepo(props){
         </StyledLink>
 
     );
+}
+
+GithubRepo.propTypes = {
+    data: PropTypes.object.isRequired
 }

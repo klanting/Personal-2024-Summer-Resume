@@ -19,7 +19,7 @@ const GeneralStyling = createGlobalStyle`
 
     body {
         background-color: ${(props) => props.theme.bodySides};
-        color: whitesmoke;
+        color: ${(props) => props.theme.textColor};
         font-size: calc(2px + 2vw);
 
     }

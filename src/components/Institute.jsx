@@ -1,6 +1,7 @@
 import institutes from "../assets/institutes.json";
 import {Tooltip} from "react-tooltip";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const StyledImage = styled.img`
     max-width: 2vw;
@@ -17,4 +18,8 @@ export default function Institute(props){
             <Tooltip id="institute"/>
         </>
     );
+}
+
+Institute.propTypes = {
+    institute: PropTypes.string.isRequired
 }

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import StyledTitle from "../../styled/StyledTitle.jsx";
 import {useContext} from "react";
 import {ThemeContext} from "../../context/ThemeContext.jsx";
+import PropTypes from "prop-types";
 
 const StyledLi = styled.li`
     list-style-type: none;
@@ -35,4 +36,8 @@ export default function AchievementItem(props){
 
         </StyledLi>
     );
+}
+
+AchievementItem.propTypes = {
+    data: PropTypes.object.isRequired
 }

@@ -30,8 +30,7 @@ const StyledNavLink = styled(NavLink)`
     
     padding: 1vw 3vw;
     
-    
-    color: whitesmoke;
+    color: ${(props) => props.theme.textColor};
 `;
 
 export default function Nav(){

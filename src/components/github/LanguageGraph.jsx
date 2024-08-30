@@ -2,7 +2,9 @@ import {AgCharts} from "ag-charts-react";
 import useSWR from "swr";
 import colors from "../../assets/colors.json"
 import styled from "styled-components";
-import {useMemo} from "react";
+import PropTypes from "prop-types";
+import {useContext} from "react";
+import {ThemeContext} from "../../context/ThemeContext.jsx";
 
 
 const StyledDiv = styled.div`
@@ -14,15 +16,17 @@ const StyledDiv = styled.div`
 export default function LanguageGraph(props){
 
     const fetcher = url => fetch(url).then(r => r.json());
-
     const { data, error, isLoading } = useSWR(`https://api.github.com/repos/${props.name}/languages`, fetcher);
 
-    if (isLoading || error){return <p>Loading</p>}
-    console.log(data)
-    const transformedData = Object.keys(data).map((key) => {return {language: key, value: data[key], color: colors[key].color} })
+    const theme = useContext(ThemeContext);
 
+    if (isLoading || error){return <p>Loading</p>}
+
+    const transformedData = Object.keys(data).map((key) => {return {language: key, value: data[key], color: colors[key].color} })
     let total = 0;
     Object.values(data).forEach(val => {total += val;})
+
+
 
     const options = {
         data: transformedData,
@@ -53,7 +57,7 @@ export default function LanguageGraph(props){
         legend: {
             item: {
                 label: {
-                    color: "white"
+                    color: theme.textColor
                 }
             }
         },
@@ -67,4 +71,8 @@ export default function LanguageGraph(props){
         </StyledDiv>
 
     );
+}
+
+LanguageGraph.propTypes = {
+    name: PropTypes.string.isRequired
 }

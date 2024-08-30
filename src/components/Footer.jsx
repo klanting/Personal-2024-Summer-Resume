@@ -7,10 +7,15 @@ const StyledFooter = styled.footer`
     background-image: linear-gradient(to right, ${(props) => props.theme.headerPrimary}, ${(props) => props.theme.headerSecondary});
     text-align: center;
     font-size: calc(2px + 2.5vw);
+    margin-top: 5vw;
     
     width: 100%;
     
     
+`;
+
+const StyledNavLink = styled(NavLink)`
+    color: ${(props) => props.theme.textColor};
 `;
 
 export default function Footer(){
@@ -19,8 +24,8 @@ export default function Footer(){
 
     return (
         <StyledFooter theme={theme}>
-            <p>All Rights reserved by Tibo Verreycken <NavLink
-                to="/credits">Credits</NavLink> &copy;</p>
+            <p>All Rights reserved by Tibo Verreycken <StyledNavLink theme={theme}
+                to="/credits">Credits</StyledNavLink> &copy;</p>
         </StyledFooter>
     );
 }

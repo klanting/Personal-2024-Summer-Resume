@@ -6,6 +6,8 @@ import Status from "../Status.jsx";
 import Timespan from "../Timespan.jsx";
 import {useContext} from "react";
 import {ThemeContext} from "../../context/ThemeContext.jsx";
+import PropTypes from "prop-types";
+
 const StyledLi = styled.li`
     list-style-type: none;
     
@@ -41,4 +43,8 @@ export default function EducationItem(props){
             <p dangerouslySetInnerHTML={{__html: props.data.additional}}></p>
         </StyledLi>
     );
+}
+
+EducationItem.propTypes = {
+    data: PropTypes.object.isRequired
 }
