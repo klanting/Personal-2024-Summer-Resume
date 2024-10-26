@@ -64,9 +64,14 @@ export default function ReadMeViewer(props){
     * */
     for (let i=0; i<requiredImages.length; i++){
         const requiredImage = requiredImages[i];
-        console.log("v", requiredImage)
         const requiredPath = requiredImage.slice(requiredImage.indexOf('(')+1, requiredImage.indexOf(')'));
-        console.log("p", requiredPath)
+
+        /*
+        * don't replace external images
+        * */
+        if (requiredPath.startsWith("http")){
+            continue
+        }
 
         const imageAccessPath = `https://raw.githubusercontent.com/${props.name}/${props.branch}/${requiredPath}`;
 
