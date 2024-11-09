@@ -102,7 +102,7 @@ Error generating stack: `+o.message+`
     font-size: calc(2px + 1.5vw);
     
     color: ${e=>e.theme.textColor};
-`;function PB(){const e=U.useContext(xs);return J.jsx("nav",{children:J.jsxs(OB,{children:[J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/",children:"Home"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/projects/",children:"Projects"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/education/",children:"Education"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/achievements/",children:"Achievements"})})]})})}const zB=Et.footer`
+`;function PB(){const e=U.useContext(xs);return J.jsx("nav",{children:J.jsxs(OB,{children:[J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/",children:"Home"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/projects/",children:"Projects"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/education/",children:"Education"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/achievements/",children:"Achievements"})})]})})}const zB=Et.footer`
     background-image: linear-gradient(to right, ${e=>e.theme.headerPrimary}, ${e=>e.theme.headerSecondary});
     text-align: center;
     font-size: calc(2px + 1vw);
@@ -583,4 +583,4 @@ This course was about visualizing 3D-objects, while also supporting lighting, sh
     width: 65%;
     margin: 0 auto;
     background-color: ${e=>e.theme.background};
-`;function Rue(){const e=U.useContext(xs);return J.jsxs(J.Fragment,{children:[J.jsx(Nue,{theme:e,children:J.jsxs(ez,{children:[J.jsx(pu,{path:"/*",element:J.jsx(UB,{})}),J.jsx(pu,{path:"/projects/*",element:J.jsx(gue,{})}),J.jsx(pu,{path:"/education/*",element:J.jsx(kue,{})}),J.jsx(pu,{path:"/achievements/*",element:J.jsx(Cue,{})}),J.jsx(pu,{path:"/credits/*",element:J.jsx(Tue,{})})]})}),J.jsx(Eue,{theme:e})]})}const Oue=az([{path:"*",Component:Rue}]);function Pue(){return J.jsx(J.Fragment,{children:J.jsx(g8,{children:J.jsx(gz,{router:Oue})})})}MD(document.getElementById("root")).render(J.jsx(U.StrictMode,{children:J.jsx(Pue,{})}));
+`;function Rue(){const e=U.useContext(xs);return J.jsxs(J.Fragment,{children:[J.jsx(Nue,{theme:e,children:J.jsxs(ez,{children:[J.jsx(pu,{path:"/*",element:J.jsx(UB,{})}),J.jsx(pu,{path:"/projects/",element:J.jsx(gue,{})}),J.jsx(pu,{path:"/education/",element:J.jsx(kue,{})}),J.jsx(pu,{path:"/achievements/",element:J.jsx(Cue,{})}),J.jsx(pu,{path:"/credits/",element:J.jsx(Tue,{})})]})}),J.jsx(Eue,{theme:e})]})}const Oue=az([{path:"*",Component:Rue}]);function Pue(){return J.jsx(J.Fragment,{children:J.jsx(g8,{children:J.jsx(gz,{router:Oue})})})}MD(document.getElementById("root")).render(J.jsx(U.StrictMode,{children:J.jsx(Pue,{})}));
