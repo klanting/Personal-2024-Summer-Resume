@@ -37,11 +37,11 @@ function Root(){
         <>
             <WrappedDiv theme={theme}>
                 <Routes>
-                    <Route path="/*" element={<Home/>}/>
-                    <Route path="/projects/*" element={<Projects/>}/>
-                    <Route path="/education/*" element={<Education/>}/>
-                    <Route path="/achievements/*" element={<Achievements/>}/>
-                    <Route path="/credits/*" element={<Credits/>}/>
+                    <Route path="/Personal-2024-Summer-Resume/*" element={<Home/>}/>
+                    <Route path="/Personal-2024-Summer-Resume/projects/*" element={<Projects/>}/>
+                    <Route path="/Personal-2024-Summer-Resume/education/*" element={<Education/>}/>
+                    <Route path="/Personal-2024-Summer-Resume/achievements/*" element={<Achievements/>}/>
+                    <Route path="/Personal-2024-Summer-Resume/credits/*" element={<Credits/>}/>
                 </Routes>
 
             </WrappedDiv>
