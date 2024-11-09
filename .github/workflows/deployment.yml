@@ -43,6 +43,8 @@ jobs:
           name: production-files
           path: ./dist
 
+      - run: git init
+
       - name: Deploy to GitHub IO
         uses: JamesIves/github-pages-deploy-action@v4
         with:
