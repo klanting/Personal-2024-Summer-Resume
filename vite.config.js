@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'docs'
   },
-  base: '/Personal-2024-Summer-Resume/'
+  base: 'https://klanting.github.io/Personal-2024-Summer-Resume/'
 })
