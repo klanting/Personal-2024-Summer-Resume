@@ -23,6 +23,10 @@ const StyledLabels = styled.div`
     margin: 3% 0;
 `;
 
+const StyledP = styled.p`
+    text-align: center;
+`;
+
 
 export default function EducationItem(props){
 
@@ -50,7 +54,7 @@ export default function EducationItem(props){
             </StyledLabels>
 
             {/*Provide additional information*/}
-            <p dangerouslySetInnerHTML={{__html: props.data.additional}}></p>
+            <StyledP dangerouslySetInnerHTML={{__html: props.data.additional}}></StyledP>
         </StyledLi>
     );
 }

@@ -30,6 +30,7 @@
   {
     "bodySides": "#ffffff",
     "background": "rgb(230,230,230)",
+    "backgroundTransparent": "rgba(230,230,230, 0.7)",
     "headerPrimary": "rgb(246,194,0)",
     "headerSecondary": "rgb(255,174,0)",
     "border": "rgb(39,39,39)",

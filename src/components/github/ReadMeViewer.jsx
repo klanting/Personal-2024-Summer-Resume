@@ -11,7 +11,7 @@ const StyledP = styled.p`
     border-radius: 10px;
     padding: 1vw;
     
-    font-size: calc(2px + 0.6vw);
+    font-size: calc(2px + 0.4vw);
 
     white-space: pre-wrap;
     margin: 3% 0;
@@ -25,7 +25,7 @@ const StyledP = styled.p`
     box-shadow: 0 0 3vmin inset rgb(100, 100, 100);
 
     max-height: 18vw;
-    width: 45vw;
+    width: 20vw;
 `;
 
 export default function ReadMeViewer(props){

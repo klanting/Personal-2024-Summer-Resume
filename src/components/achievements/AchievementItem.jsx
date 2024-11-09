@@ -14,7 +14,7 @@ const StyledLi = styled.li`
 `;
 
 const StyledImage = styled.img`
-    max-width: 30%;
+    max-width: 50%;
     
     display: block;
     margin: 0 auto;

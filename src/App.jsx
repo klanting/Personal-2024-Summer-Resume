@@ -2,9 +2,7 @@ import {Route, Routes, RouterProvider, createBrowserRouter} from 'react-router-d
 import Home from "./mains/Home.jsx";
 import Projects from "./mains/Projects.jsx";
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from "./components/Header.jsx";
-import Nav from "./components/Nav.jsx";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import Education from "./mains/Education.jsx";
 import Achievements from "./mains/Achievements.jsx";
 import ThemeContextProvider, {ThemeContext} from "./context/ThemeContext.jsx";
@@ -20,13 +18,13 @@ const GeneralStyling = createGlobalStyle`
     body {
         background-color: ${(props) => props.theme.bodySides};
         color: ${(props) => props.theme.textColor};
-        font-size: calc(2px + 2vw);
+        font-size: calc(2px + 1.1vw);
 
     }
 `;
 
 const WrappedDiv = styled.div`
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
     background-color: ${(props) => props.theme.background};
 `;

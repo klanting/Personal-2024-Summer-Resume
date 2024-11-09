@@ -8,6 +8,9 @@ const StyledDiv = styled.div`
     min-height: 80vh;
 `;
 
+
+
+
 export default function Page(props){
     return (
         <>

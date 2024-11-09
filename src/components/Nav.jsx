@@ -29,6 +29,8 @@ const StyledNavLink = styled(NavLink)`
     border-radius: 2vw;
     
     padding: 1vw 3vw;
+
+    font-size: calc(2px + 1.5vw);
     
     color: ${(props) => props.theme.textColor};
 `;

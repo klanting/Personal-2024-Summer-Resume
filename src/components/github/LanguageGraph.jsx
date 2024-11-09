@@ -8,7 +8,7 @@ import {ThemeContext} from "../../context/ThemeContext.jsx";
 
 
 const StyledDiv = styled.div`
-    width: 25%;
+    width: 30%;
     margin: auto;
     aspect-ratio: 1;
 `;

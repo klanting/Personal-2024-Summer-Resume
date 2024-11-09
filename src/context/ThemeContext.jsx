@@ -4,7 +4,7 @@ import themeList from "../assets/themeList.json";
 
 export const ThemeContext = createContext();
 
-const theme = themeList[5];
+const theme = themeList[2];
 
 export default function ThemeContextProvider(props){
     return (

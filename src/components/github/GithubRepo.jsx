@@ -12,10 +12,11 @@ import PropTypes from "prop-types";
 const StyledLink = styled(NavLink)`
     text-decoration: none;
     color: ${(props) => props.theme.textColor};
+    
 `;
 
 const StyledDiv = styled.div`
-    width: 70vw;
+    width: 30vw;
     
     background-image: linear-gradient(10deg, ${(props) => props.theme.projectsBackgroundPrimary}, ${(props) => props.theme.projectsBackgroundSecondary});
 
@@ -25,14 +26,21 @@ const StyledDiv = styled.div`
     margin: 5% auto;
     cursor: pointer;
 
+    height: 30vw;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    scrollbar-color: rgb(100, 100, 100) transparent;
+    scrollbar-width: thin;
 
     &:hover, &:focus {
-        box-shadow: 0 0 40px ${(props) => props.theme.projectGlow};
+        box-shadow: 0 0 20px ${(props) => props.theme.projectGlow};
     }
 `;
 
 const StyledDescription = styled.p`
-    font-size: calc(2px + 1vw);
+    font-size: calc(2px + 0.7vw);
     margin: 2% 0;
 `;
 
@@ -48,7 +56,7 @@ const StyledTopic = styled.p`
     display: inline;
     font-size: calc(2px + 0.8vw);
     margin: 2% 0.6%;
-    padding: 0.3vw 0.8vw;
+    padding: 0.15vw 0.4vw;
     border-radius: 1vw;
 
     text-align: center;

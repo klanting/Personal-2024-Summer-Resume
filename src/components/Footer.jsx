@@ -6,7 +6,7 @@ import {ThemeContext} from "../context/ThemeContext.jsx";
 const StyledFooter = styled.footer`
     background-image: linear-gradient(to right, ${(props) => props.theme.headerPrimary}, ${(props) => props.theme.headerSecondary});
     text-align: center;
-    font-size: calc(2px + 2.5vw);
+    font-size: calc(2px + 1vw);
     margin-top: 5vw;
     
     width: 100%;
