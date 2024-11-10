@@ -58,7 +58,6 @@ const router = createBrowserRouter([{path: "*", Component: Root}], {basename: im
 
 function App() {
 
-    console.log(import.meta.env.BASE_URL)
     return (
     <>
         <ThemeContextProvider>

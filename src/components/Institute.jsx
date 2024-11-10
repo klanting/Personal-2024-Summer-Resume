@@ -13,7 +13,7 @@ export default function Institute(props){
     return (
         <>
             <p>Institute: <StyledImage data-tooltip-id="institute" data-tooltip-content={institutes[props.institute]["name"]}
-                                       src={institutes[props.institute]["image"]}
+                                       src={import.meta.env.BASE_URL+institutes[props.institute]["image"]}
                                        alt={institutes[props.institute]["name"]}/></p>
             <Tooltip id="institute"/>
         </>
