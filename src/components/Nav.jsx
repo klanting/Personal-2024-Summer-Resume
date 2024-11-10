@@ -43,17 +43,17 @@ export default function Nav(){
         <nav>
             <StyledUl>
                 <StyledListItem>
-                    <StyledNavLink theme={theme} to={`/`}>Home</StyledNavLink>
+                    <StyledNavLink theme={theme} to={`${import.meta.env.BASE_URL}`}>Home</StyledNavLink>
 
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledNavLink theme={theme} to={`/projects/`}>Projects</StyledNavLink>
+                    <StyledNavLink theme={theme} to={`${import.meta.env.BASE_URL}projects/`}>Projects</StyledNavLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledNavLink theme={theme} to={`/education/`}>Education</StyledNavLink>
+                    <StyledNavLink theme={theme} to={`${import.meta.env.BASE_URL}education/`}>Education</StyledNavLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledNavLink theme={theme} to={`/achievements/`}>Achievements</StyledNavLink>
+                    <StyledNavLink theme={theme} to={`${import.meta.env.BASE_URL}achievements/`}>Achievements</StyledNavLink>
                 </StyledListItem>
             </StyledUl>
         </nav>
