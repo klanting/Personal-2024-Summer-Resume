@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://klanting.github.io/Personal-2024-Summer-Resume/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

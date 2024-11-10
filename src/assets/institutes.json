@@ -1,21 +1,21 @@
 {
   "GIB": {
-    "image": "/institutes/gib-logo.png",
+    "image": "./institutes/gib-logo.png",
     "name": "Gemeentelijk Instituut Brasschaat (GIB)",
     "country": "Belgium"
   },
   "UA": {
-    "image": "/institutes/UA-logo.png",
+    "image": "./institutes/UA-logo.png",
     "name": "UAntwerpen",
     "country": "Belgium"
   },
   "BU": {
-    "image": "/institutes/BU-logo.png",
+    "image": "./institutes/BU-logo.png",
     "name": "Boston University",
     "country": "USA"
   },
   "Personal": {
-    "image": "/institutes/Personal.png",
+    "image": "./institutes/Personal.png",
     "name": "Personal",
     "country": null
   }

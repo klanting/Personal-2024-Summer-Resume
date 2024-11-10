@@ -37,7 +37,7 @@ export default function Home() {
         <StyledBackground theme={theme}>
 
             <Page title={"Homepage"}>
-                <StyledProfileImage id="profile-picture" src="/pictures/resume-picture.jpg" alt="Tibo Verreycken"/>
+                <StyledProfileImage id="profile-picture" src="./pictures/resume-picture.jpg" alt="Tibo Verreycken"/>
 
 
                 <StyledText>
