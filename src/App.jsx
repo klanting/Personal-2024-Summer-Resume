@@ -8,6 +8,7 @@ import Achievements from "./mains/Achievements.jsx";
 import ThemeContextProvider, {ThemeContext} from "./context/ThemeContext.jsx";
 import Credits from "./mains/Credits.jsx";
 
+
 const GeneralStyling = createGlobalStyle`
 
     * {
@@ -53,7 +54,7 @@ function Root(){
     );
 }
 
-const router = createBrowserRouter([{path: "*", Component: Root}])
+const router = createBrowserRouter([{path: "*", Component: Root}], {basename: import.meta.env.BASE_URL})
 
 function App() {
 

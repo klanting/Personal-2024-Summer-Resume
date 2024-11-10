@@ -4,6 +4,7 @@ import Page from "../components/Page.jsx";
 import {useContext} from "react";
 import {ThemeContext} from "../context/ThemeContext.jsx";
 
+
 const StyledProfileImage = styled.img`
     max-width: 20%;
     margin: 3vw auto;
@@ -21,7 +22,7 @@ const StyledBackground = styled.div`
     ${(props) => props.theme.backgroundTransparent} 10%,
     ${(props) => props.theme.background}
     ), 
-    url("/pictures/overview-image.jpg");
+    url("./pictures/overview-image.jpg");
     
     background-size: 100%;
 `;
