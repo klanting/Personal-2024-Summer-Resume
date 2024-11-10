@@ -33,7 +33,7 @@ export default function AchievementItem(props){
 
             <StyledTitle>{props.data.title}</StyledTitle>
 
-            {props.data.image !== null && <StyledImage src={props.data.image} alt={props.data.title}/>}
+            {props.data.image !== null && <StyledImage src={import.meta.env.BASE_URL+props.data.image} alt={props.data.title}/>}
 
             <p>{props.data.description}</p>
 

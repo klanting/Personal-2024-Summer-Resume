@@ -22,7 +22,7 @@ const StyledBackground = styled.div`
     ${(props) => props.theme.backgroundTransparent} 10%,
     ${(props) => props.theme.background}
     ), 
-    url("./pictures/overview-image.jpg");
+    url("${import.meta.env.BASE_URL}/pictures/overview-image.jpg");
     
     background-size: 100%;
 `;

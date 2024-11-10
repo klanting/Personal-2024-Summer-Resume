@@ -18,7 +18,7 @@ export default function Status(props){
             <p>
                 Status: <StyledImage data-tooltip-id="status"
                                      data-tooltip-content={`${props.status.tag} ${props.status.additional}`}
-                                     src={status[props.status.tag]}
+                                     src={import.meta.env.BASE_URL+status[props.status.tag]}
                                      alt={props.status.tag}/>
             </p>
             <Tooltip id="status"/>

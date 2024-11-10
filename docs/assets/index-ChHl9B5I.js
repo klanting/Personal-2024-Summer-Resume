@@ -130,7 +130,7 @@ Error generating stack: `+o.message+`
     ${e=>e.theme.backgroundTransparent} 10%,
     ${e=>e.theme.background}
     ), 
-    url("./pictures/overview-image.jpg");
+    url("${"/Personal-2024-Summer-Resume/"}/pictures/overview-image.jpg");
     
     background-size: 100%;
 `;function UB(){const e=U.useContext(xs);return J.jsx(J.Fragment,{children:J.jsx(GB,{theme:e,children:J.jsxs(Lh,{title:"Homepage",children:[J.jsx(_B,{id:"profile-picture",src:"./pictures/resume-picture.jpg",alt:"Tibo Verreycken"}),J.jsxs(IB,{children:["Hi, I am ",J.jsx("strong",{children:"Tibo Verreycken"}),", currently a computer science student at the University of Antwerp (Belgium).",J.jsx("br",{}),"At my university, I also participate in the Honours Programme Science.",J.jsx("br",{}),"I am very interested in learning new things and gaining new expierences"]})]})})})}var y8={exports:{}},v8={};/**
@@ -532,7 +532,7 @@ l0,-`+(n+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
     max-width: 2vw;
     vertical-align: bottom;
     border-radius: 5px;
-`;function uN(e){return J.jsxs(J.Fragment,{children:[J.jsxs("p",{children:["Status: ",J.jsx(bue,{"data-tooltip-id":"status","data-tooltip-content":`${e.status.tag} ${e.status.additional}`,src:vue[e.status.tag],alt:e.status.tag})]}),J.jsx(lN,{id:"status"})]})}uN.propTypes={status:Oi.object.isRequired};function hN(e){let t=`${e.timespan[0]}-${e.timespan[1]}`;return e.timespan[1]===null&&(t=e.timespan[0]),J.jsx("p",{children:t})}hN.propTypes={timespan:Oi.array.isRequired};const xue=Et.li`
+`;function uN(e){return J.jsxs(J.Fragment,{children:[J.jsxs("p",{children:["Status: ",J.jsx(bue,{"data-tooltip-id":"status","data-tooltip-content":`${e.status.tag} ${e.status.additional}`,src:"/Personal-2024-Summer-Resume/"+vue[e.status.tag],alt:e.status.tag})]}),J.jsx(lN,{id:"status"})]})}uN.propTypes={status:Oi.object.isRequired};function hN(e){let t=`${e.timespan[0]}-${e.timespan[1]}`;return e.timespan[1]===null&&(t=e.timespan[0]),J.jsx("p",{children:t})}hN.propTypes={timespan:Oi.array.isRequired};const xue=Et.li`
     list-style-type: none;
     
     border: 2px solid ${e=>e.theme.border};
@@ -562,7 +562,7 @@ This course was about visualizing 3D-objects, while also supporting lighting, sh
     
     display: block;
     margin: 0 auto;
-`;function pN(e){const t=U.useContext(xs);return J.jsxs(Due,{theme:t,children:[J.jsx(Q3,{children:e.data.title}),e.data.image!==null&&J.jsx(Aue,{src:e.data.image,alt:e.data.title}),J.jsx("p",{children:e.data.description})]})}pN.propTypes={data:Oi.object.isRequired};const Lue=Et.ul`
+`;function pN(e){const t=U.useContext(xs);return J.jsxs(Due,{theme:t,children:[J.jsx(Q3,{children:e.data.title}),e.data.image!==null&&J.jsx(Aue,{src:"/Personal-2024-Summer-Resume/"+e.data.image,alt:e.data.title}),J.jsx("p",{children:e.data.description})]})}pN.propTypes={data:Oi.object.isRequired};const Lue=Et.ul`
     padding: 0;
     width: 70%;
     margin: 0 auto;
