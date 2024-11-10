@@ -102,7 +102,7 @@ Error generating stack: `+o.message+`
     font-size: calc(2px + 1.5vw);
     
     color: ${e=>e.theme.textColor};
-`;function PB(){const e=U.useContext(xs);return J.jsx("nav",{children:J.jsxs(OB,{children:[J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/",children:"Home"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/projects/",children:"Projects"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/education/",children:"Education"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/achievements/",children:"Achievements"})})]})})}const zB=Et.footer`
+`;function PB(){const e=U.useContext(xs);return J.jsx("nav",{children:J.jsxs(OB,{children:[J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/",children:"Home"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/projects/",children:"Projects"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/education/",children:"Education"})}),J.jsx(cf,{children:J.jsx(uf,{theme:e,to:"/Personal-2024-Summer-Resume/achievements/",children:"Achievements"})})]})})}const zB=Et.footer`
     background-image: linear-gradient(to right, ${e=>e.theme.headerPrimary}, ${e=>e.theme.headerSecondary});
     text-align: center;
     font-size: calc(2px + 1vw);
