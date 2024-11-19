@@ -4,7 +4,7 @@ import {Tooltip} from "react-tooltip";
 import PropTypes from "prop-types";
 
 const StyledImage = styled.img`
-    max-width: 2vw;
+    max-width: 1.5vw;
     vertical-align: bottom;
     border-radius: 5px;
 `;
