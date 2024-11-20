@@ -19,3 +19,6 @@ make production:
 vite build
 ```
 
+Sidenote: uses the github API without needing to provide a token, as a result the API calls have an hourly limit. SO loading the project page
+multiple times can cause an hour timeout.
+
