@@ -2,6 +2,7 @@ import {NavLink} from "react-router-dom";
 import styled from "styled-components";
 import {useContext} from "react";
 import {ThemeContext} from "../context/ThemeContext.jsx";
+import ThemeModeButton from "./ThemeModeButton.jsx";
 
 const StyledFooter = styled.footer`
     background-image: linear-gradient(to right, ${(props) => props.theme.headerPrimary}, ${(props) => props.theme.headerSecondary});
@@ -20,12 +21,14 @@ const StyledNavLink = styled(NavLink)`
 
 export default function Footer(){
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     return (
         <StyledFooter theme={theme}>
+
             <p>All Rights reserved by Tibo Verreycken <StyledNavLink theme={theme}
-                to="/credits">Credits</StyledNavLink> &copy;</p>
+                to="/credits">Credits</StyledNavLink> &copy;
+            </p>
         </StyledFooter>
     );
 }

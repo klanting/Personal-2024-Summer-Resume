@@ -32,7 +32,7 @@ const WrappedDiv = styled.div`
 
 function Root(){
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     return (
         <>

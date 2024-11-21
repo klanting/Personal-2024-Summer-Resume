@@ -34,7 +34,7 @@ export default function EducationItem(props){
     * This component provides an entry of an education record.
     * */
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     return (
         <StyledLi theme={theme}>

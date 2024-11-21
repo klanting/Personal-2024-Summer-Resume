@@ -19,7 +19,10 @@ const StyledBackground = styled.div`
     min-height: 80vh;
     
     background: linear-gradient(140deg,
-    ${(props) => props.theme.backgroundTransparent} 10%,
+    /*
+    provide transparent gradient if exists
+    */
+    ${(props) => props.theme.backgroundTransparent ? props.theme.backgroundTransparent: props.theme.background} 10%,
     ${(props) => props.theme.background}
     ), 
     url("${import.meta.env.BASE_URL}/pictures/overview-image.jpg");
@@ -30,7 +33,7 @@ const StyledBackground = styled.div`
 
 export default function Home() {
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     return (
         <>

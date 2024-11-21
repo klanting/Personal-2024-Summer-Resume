@@ -37,7 +37,7 @@ const StyledNavLink = styled(NavLink)`
 
 export default function Nav(){
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     return(
         <nav>

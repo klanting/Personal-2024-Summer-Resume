@@ -109,7 +109,7 @@ export default function GithubRepo(props){
     * This component represents a GitHub repository whose information is being displayed
     * */
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     const stripped = stripTitle(props.data.name);
     if (!stripped.valid){

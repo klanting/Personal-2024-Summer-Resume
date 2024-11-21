@@ -22,7 +22,7 @@ export default function LanguageGraph(props){
     const fetcher = url => fetch(url).then(r => r.json());
     const { data, error, isLoading } = useSWR(`https://api.github.com/repos/${props.name}/languages`, fetcher);
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     if (isLoading || error){return <p>Loading</p>}
 

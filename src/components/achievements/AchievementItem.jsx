@@ -26,7 +26,7 @@ export default function AchievementItem(props){
     * This component provides an entry of an achievement.
     * */
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     return (
         <StyledLi theme={theme}>
