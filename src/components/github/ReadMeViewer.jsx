@@ -46,7 +46,7 @@ export default function ReadMeViewer(props){
     }
 
     /*Find all the images in the readme*/
-    const imageRegex = RegExp(`\\[.*\\]\\(.*\\)`, 'g');
+    const imageRegex = RegExp(`!\\[.*\\]\\(.*\\)`, 'g');
     let requiredImages = data.match(imageRegex);
 
     if (requiredImages === null){
