@@ -50,7 +50,7 @@ export default function Home() {
                     <br/>
                     At my university, I also participate in the Honours Programme Science.
                     <br/>
-                    I am very interested in learning new things and gaining new expierences
+                    I am very interested in learning new things and gaining new experiences.
                 </StyledText>
 
             </Page>
