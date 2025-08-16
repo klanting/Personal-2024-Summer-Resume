@@ -168,7 +168,7 @@ export default function Footer({ onNavClick }) {
                         </svg>
                     </SocialLink>
                     <SocialLink 
-                        href="https://linkedin.com/in/tiboverreycken" 
+                        href="https://www.linkedin.com/in/tibo-verreycken-459243283"
                         target="_blank" 
                         rel="noopener noreferrer"
                         theme={theme}
