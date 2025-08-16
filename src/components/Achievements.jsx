@@ -170,10 +170,6 @@ export default function Achievements() {
                             <AchievementDescription>
                                 {achievement.description}
                             </AchievementDescription>
-                            
-                            <AchievementDate theme={theme}>
-                                {achievement.date}
-                            </AchievementDate>
                         </AchievementCard>
                     ))}
                 </AchievementsGrid>
