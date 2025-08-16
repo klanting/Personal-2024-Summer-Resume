@@ -34,7 +34,7 @@ const AboutGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
