@@ -106,9 +106,7 @@ const AchievementDate = styled.div`
     display: inline-block;
 `;
 
-const AchievementImage = styled.image`
-    width: 100%;
-    height: 200px;
+const AchievementImage = styled.img`
     margin-bottom: 1.5rem;
     border-radius: 12px;
     overflow: hidden;
