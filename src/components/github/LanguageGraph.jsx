@@ -8,9 +8,14 @@ import {ThemeContext} from "../../context/ThemeContext.jsx";
 
 
 const StyledDiv = styled.div`
-    width: 30%;
+    width: 100%;
+    max-width: 300px;
     margin: auto;
     aspect-ratio: 1;
+    
+    @media (max-width: 768px) {
+        max-width: 250px;
+    }
 `;
 
 export default function LanguageGraph(props){
@@ -24,11 +29,51 @@ export default function LanguageGraph(props){
 
     const {theme} = useContext(ThemeContext);
 
-    if (isLoading || error){return <p>Loading</p>}
+    if (isLoading) {
+        return (
+            <div style={{ 
+                textAlign: 'center', 
+                padding: '2rem',
+                color: theme.textColor,
+                opacity: 0.7
+            }}>
+                Loading language data...
+            </div>
+        );
+    }
+    
+    if (error || !data) {
+        return (
+            <div style={{ 
+                textAlign: 'center', 
+                padding: '2rem',
+                color: '#6b7280',
+                fontSize: '0.9rem'
+            }}>
+                Language data unavailable
+            </div>
+        );
+    }
+
+    console.log(data);
 
     const transformedData = Object.keys(data).map((key) => {return {language: key, value: data[key], color: colors[key].color} })
     let total = 0;
     Object.values(data).forEach(val => {total += val;})
+    
+    // If no language data available, show message
+    if (transformedData.length === 0) {
+        return (
+            <div style={{ 
+                textAlign: 'center', 
+                padding: '2rem',
+                color: '#6b7280',
+                fontSize: '0.9rem'
+            }}>
+                No language data available for this repository
+            </div>
+        );
+    }
 
     /*
     * Donut config

@@ -11,24 +11,23 @@
   },
   {
     "title": "Bachelor degree Computer Science",
-    "timespan": ["2022", "now"],
+    "timespan": ["2022", "2025"],
     "institute": "UA",
     "status": {
-      "tag":  "in progress",
-      "additional": "2/3 years completed"
+      "tag":  "completed",
+      "additional": ""
     },
     "additional": "I am Majoring in Computer Science at the University of Antwerp<br/>1st year weighted grade: 19.10/20 (=95.5%)<br/>2nd year weighted grade: 18.95/20 (=94.75%)"
   },
   {
     "title": "Honours Programme Science",
-    "timespan": ["2023", "now"],
+    "timespan": ["2023", "2025"],
     "institute": "UA",
     "status": {
-      "tag":  "in progress",
-      "additional": "1/2 years completed"
+      "tag":  "completed",
+      "additional": ""
     },
     "additional": "Currently participating in the Honours Programme Science, which is a special program for students (who are doing a bachelor's degree that is part of the science department). This program covers present-day topics of all types of sciences that are part of the science department. As part of this program I get lectures from professors (of various fields) about the topics they are currently researching about. I also followed research groups of our university (my case <strong>IDLab</strong>: one of the biggest research groups in Belgium for computer science and <strong>TQC</strong>: Theory of quantum systems and complex systems)."
-
   },
   {
     "title": "Study Abroad: Topics in Computer Science: Web Application Development (CS 391)",
@@ -39,6 +38,17 @@
       "additional": ""
     },
     "additional": "During the summer of 2024, I took a course at Boston University. In this course I learned more about web development<br/>Course GPA: 4.0 (=100%)"
+
+  },
+  {
+    "title": "Master degree Computer Science: Data Science and Artificial Intelligence",
+    "timespan": ["2025", "now"],
+    "institute": "UA",
+    "status": {
+      "tag":  "in progress",
+      "additional": "Will start in september 2025"
+    },
+    "additional": "I am currently participating in the master degree Computer Science: Data Science and Artificial Intelligence at the University of Antwerp."
 
   }
 ]
