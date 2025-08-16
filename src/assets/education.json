@@ -15,9 +15,10 @@
     "institute": "UA",
     "status": {
       "tag":  "completed",
-      "additional": ""
+      "additional": "",
+      "score": "Greatest distinction (Maxima cum laude)"
     },
-    "additional": "I am Majoring in Computer Science at the University of Antwerp<br/>1st year weighted grade: 19.10/20 (=95.5%)<br/>2nd year weighted grade: 18.95/20 (=94.75%)"
+    "additional": "I am Majoring in Computer Science at the University of Antwerp"
   },
   {
     "title": "Honours Programme Science",
@@ -35,9 +36,9 @@
     "institute": "BU",
     "status": {
       "tag":  "completed",
-      "additional": ""
+      "additional": "Course GPA: 4.0"
     },
-    "additional": "During the summer of 2024, I took a course at Boston University. In this course I learned more about web development<br/>Course GPA: 4.0 (=100%)"
+    "additional": "During the summer of 2024, I took a course at Boston University. In this course I learned more about web development"
 
   },
   {

@@ -260,12 +260,19 @@ export default function Education() {
                             <Period>
                                 {item.timespan[0]} {item.timespan[1] ? `- ${item.timespan[1]}` : ''}
                             </Period>
-                            <StatusBadge status={item.status.tag}>
-                                {item.status.tag === 'completed' ? '✅ Completed' : 
-                                 item.status.tag === 'in progress' ? '🔄 In Progress' : item.status.tag}
-                                {item.status.additional && ` (${item.status.additional})`}
-                            </StatusBadge>
-                            <Description dangerouslySetInnerHTML={{ __html: item.additional }} />
+                                <StatusBadge status={item.status.tag}>
+                                    {item.status.tag === 'completed' ? '✅ Completed' :
+                                        item.status.tag === 'in progress' ? '🔄 In Progress' : item.status.tag}
+                                    {item.status.additional && ` (${item.status.additional})`}
+
+                                    {item.status.score && <>
+                                        <br/>
+                                        <br/>
+                                        {item.status.score}
+                                    </>}
+                                </StatusBadge>
+
+                                <Description dangerouslySetInnerHTML={{ __html: item.additional }} />
                             </TimelineContent>
                         </TimelineItem>
                     ))}

@@ -106,7 +106,7 @@ const AchievementDate = styled.div`
     display: inline-block;
 `;
 
-const AchievementImage = styled.div`
+const AchievementImage = styled.image`
     width: 100%;
     height: 200px;
     margin-bottom: 1.5rem;
@@ -150,18 +150,6 @@ const getAchievementIcon = (title) => {
     return icons[title] || '🏅';
 };
 
-const getAchievementImage = (title) => {
-    const images = {
-        'Best Student Award': './pictures/best-student-award.png',
-        'Honours Programme': './pictures/overview-image.jpg',
-        'Academic Excellence': './pictures/overview-image.jpg',
-        'Research Project': './pictures/overview-image.jpg',
-        'Competition Winner': './pictures/overview-image.jpg',
-        'Leadership Award': './pictures/overview-image.jpg'
-    };
-    return images[title] || './pictures/overview-image.jpg';
-};
-
 export default function Achievements() {
     const { theme } = useContext(ThemeContext);
 
@@ -179,7 +167,8 @@ export default function Achievements() {
                             </AchievementIcon>
                             
                             <AchievementTitle>{achievement.title}</AchievementTitle>
-                            
+                            {achievement.image !== null && <AchievementImage src={import.meta.env.BASE_URL+achievement.image}
+                                                                        alt={achievement.title}/>}
                             <AchievementDescription>
                                 {achievement.description}
                             </AchievementDescription>

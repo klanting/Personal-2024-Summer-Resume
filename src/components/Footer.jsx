@@ -183,7 +183,7 @@ export default function Footer({ onNavClick }) {
                 
                 <FooterBottom>
                     <Copyright theme={theme}>
-                        © 2024 Tibo Verreycken. All rights reserved.
+                        © 2025 Tibo Verreycken. All rights reserved.
                     </Copyright>
                     
                     <FooterNav>
@@ -216,12 +216,6 @@ export default function Footer({ onNavClick }) {
                             theme={theme}
                         >
                             Projects
-                        </FooterNavLink>
-                        <FooterNavLink 
-                            onClick={() => handleNavClick('contact')}
-                            theme={theme}
-                        >
-                            Contact
                         </FooterNavLink>
                     </FooterNav>
                 </FooterBottom>
