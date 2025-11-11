@@ -174,13 +174,12 @@ export default function Hero() {
                 </Greeting>
                 
                 <Subtitle theme={theme}>
-                    Computer Science Student & Developer
+                    Computer Science Student
                 </Subtitle>
                 
                 <Description theme={theme}>
                     Currently pursuing Computer Science at the University of Antwerp, Belgium. 
-                    I'm passionate about learning new technologies and building innovative solutions. 
-                    Part of the Honours Programme Science, always eager to take on new challenges.
+                    I'm passionate about learning new technologies and building innovative solutions.
                 </Description>
                 
                 <CTAButton theme={theme} onClick={scrollToAbout}>
